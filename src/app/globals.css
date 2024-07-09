@@ -1,0 +1,356 @@
+/* Tailwind CSS imports */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Base styles */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Component styles */
+.advanced-text-to-gui {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+.advanced-text-to-gui__main {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .advanced-text-to-gui__main {
+    width: 66.666667%;
+    padding-right: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.advanced-text-to-gui__sidebar {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .advanced-text-to-gui__sidebar {
+    width: 33.333333%;
+  }
+}
+
+.advanced-text-to-gui__textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  height: 8rem;
+}
+
+.advanced-text-to-gui__button-group {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.advanced-text-to-gui__bgui-components {
+  margin-bottom: 1rem;
+}
+
+.advanced-text-to-gui__bgui-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.advanced-text-to-gui__generated-gui {
+  margin-top: 1rem;
+}
+
+.advanced-text-to-gui__generated-content {
+  padding: 1rem;
+  background-color: #f3f4f6;
+  border-radius: 0.375rem;
+  height: 16rem;
+  overflow: auto;
+}
+
+.advanced-text-to-gui__integrations {
+  width: 100%;
+  background-color: white;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.advanced-text-to-gui__integrations-header {
+  padding: 1rem;
+  background-color: #f9fafb;
+}
+
+.advanced-text-to-gui__integrations-search {
+  padding-left: 2rem;
+}
+
+.advanced-text-to-gui__integrations-tabs {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-bottom-width: 1px;
+}
+
+.advanced-text-to-gui__integrations-content {
+  height: 16rem;
+  padding: 0.5rem;
+}
+
+.advanced-text-to-gui__integrations-footer {
+  padding: 1rem;
+  border-top-width: 1px;
+}
+
+.advanced-text-to-gui__custom-integration {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.advanced-text-to-gui__request-link {
+  font-size: 0.875rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+/* Custom styles for componentTemplates */
+
+/* Basic Components */
+.component-button {
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.component-button:hover {
+  background-color: #2563eb;
+}
+
+.component-input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+}
+
+.component-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.component-checkbox {
+  margin-right: 0.5rem;
+}
+
+.component-radio {
+  margin-right: 0.5rem;
+}
+
+.component-select {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Layout Components */
+.component-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.component-accordion {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+}
+
+.component-tabs {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Navigation Components */
+.component-navbar {
+  background-color: #1f2937;
+  color: white;
+}
+
+.component-breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.component-breadcrumb > * + * {
+  margin-left: 0.5rem;
+}
+
+/* Data Display Components */
+.component-table {
+  min-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.component-avatar {
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+/* Feedback Components */
+.component-alert {
+  padding: 1rem;
+  border-radius: 0.375rem;
+}
+
+.component-progress {
+  width: 100%;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  height: 0.625rem;
+}
+
+.component-toast {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+}
+
+/* Overlay Components */
+.component-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.component-popover {
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  border-radius: 0.375rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Form Components */
+.component-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.component-slider {
+  width: 100%;
+  height: 0.5rem;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  appearance: none;
+  cursor: pointer;
+}
+
+/* Typography Components */
+.component-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.component-paragraph {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Miscellaneous Components */
+.component-separator {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 1rem 0;
+}
+
+.component-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
